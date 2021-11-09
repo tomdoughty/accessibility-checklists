@@ -1,0 +1,17 @@
+---
+layout: layout.njk
+pagination:
+  data: collections.responsibilitiesList
+  size: 1
+  alias: responsibility
+eleventyComputed:
+  title: Checks {{ responsibility | title }} checks
+permalink: /{{ responsibility | slug }}-checks/
+---
+
+<h1>{{ responsibility | title }} checks</h1>
+<ol>
+  {% for check in collections.responsibilities[ responsibility ] %}
+    <li><a href="{{ check.url | url }}">{{ check.data.title }}</a></li>
+  {% endfor %}
+</ol>

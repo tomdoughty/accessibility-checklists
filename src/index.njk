@@ -1,0 +1,13 @@
+---
+layout: layout.njk
+title: Accessibility checklists
+---
+
+<h1>Checklists</h1>
+<ol>
+  <li><a href="/all-checks">All checks</a></li>
+  {{ collections.responsibilitiesList | console }}
+  {% for responsibility in collections.responsibilitiesList %}
+    <li><a href="{{ responsibility | slug | url }}-checks">{{ responsibility | title }} checks</a></li>
+  {% endfor %}
+</ol>

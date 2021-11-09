@@ -1,0 +1,33 @@
+---
+layout: layout.njk
+title: All checks
+permalink: /all-checks/
+---
+
+<h1>All checks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>Order</td>
+      <td>Interaction</td>
+      <td>Check</td>
+      <td>SC</td>
+      <td>Topic</td>
+      <td>Responsibility</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for check in collections.checks %}
+      {# <li><a href="{{ check.url | url }}">{{ check.data.title }}</a></li> #}
+      <tr>
+        <td>{{ check.data.order}}</td>
+        <td>{{ check.data.interaction }}</td>
+        <td><a href="{{ check.url | url }}">{{ check.data.title }}</a></td>
+        <td>{{ check.data.sc }}</td>
+        <td>{{ check.data.topic }}</td>
+        <td>{{ check.data.responsibilities | joinData }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

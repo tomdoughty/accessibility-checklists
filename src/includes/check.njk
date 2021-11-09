@@ -1,0 +1,24 @@
+{% extends 'layout.njk' %}
+
+{% block content%}
+  <div class="nhsuk-width-container">
+    <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+      <h1>{{ title }}</h1>
+      <p><b>Order:</b> {{ order }}</p>
+      <p><b>Interaction:</b> {{ interaction }}</p>
+      <p><b>SC:</b> {{ sc }}</p>
+      <p><b>Topic:</b> {{ topic }}</p>
+      <p><b>Responsibility:</b> {{ responsibility | joinData }}</p>
+      <p><b>Topic:</b> {{ topic | joinData}}</p>
+      <p><b>Filters:</b> {{ filters | joinData}}</p>
+      <p><b>Priority:</b> {{ priority | joinData}}</p>
+      <p><b>Severity:</b> {{ severity | joinData}}</p>
+      <p><b>Test procedure:</b> {{ testProcedure | joinData}}</p>
+      <p><b>Knowledge to test:</b> {{ knowledgeToTest | joinData}}</p>
+      <p><b>Time to test:</b> {{ timeToTest | joinData}}</p>
+      <p><b>Found in audits:</b> {{ foundInAudits | joinData}}</p>
+      <p><b>Relevance:</b> {{ relevance | joinData}}</p>
+      {{ content | safe }}
+    </main>
+  </div>
+{% endblock %}

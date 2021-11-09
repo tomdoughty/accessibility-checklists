@@ -1,0 +1,17 @@
+{
+  "name": "nhsuk-11ty-site",
+  "version": "0.0.1",
+  "description": "Create static websites using 11ty",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "author": "https://github.com/tomdoughty/",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "eleventy-plugin-babel": "^1.0.1",
+    "eleventy-plugin-sass": "^1.2.0",
+    "nhsuk-frontend": "^5.2.1"
+  }
+}
